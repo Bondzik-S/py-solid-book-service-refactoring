@@ -68,7 +68,7 @@ def main(book: Book, commands: list[tuple[str, str]]) -> None | str:
             else:
                 raise ValueError(f"Unknown print type: {method_type}")
         elif cmd == "serialize":
-            if method_type.lower() in serializers:  # Normalize case
+            if method_type.lower() in serializers:
                 return serializers[method_type.lower()].serialize(book)
             else:
                 raise ValueError(f"Unknown serialize type: {method_type}")
